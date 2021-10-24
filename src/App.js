@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router basename={'/codeCraft'}>
           <Switch>     
-          <Route path="/cs/codeCraft/secret/registers/3.0" component={Secret}/>
+          <Route path="/n1b2312398sadasn" component={Secret}/>
 
             <Route path="/register" component={Register}/>
             <Route path="/" component={Home} />             
