@@ -32,22 +32,30 @@ async function register(team){
 
   const q = query(collection(db, "registrations"));
 
-  try{
-    const querySnapshot = await getDocs(q); 
-    if(querySnapshot.size>0){
-      querySnapshot.forEach((doc) => {
-        if(team.member1.email === doc.data().member1.email || 
-          team.member1.email === doc.data().member2.email ||
-          team.member2.email === doc.data().member1.email ||
-          team.member2.email === doc.data().member2.email){
-            checkMails=false
-          }
-      });
-    }   
-  }
-  catch(e){
-    return {status:false,desc:'Unknown Error Occured'};
-  }   
+  if((team.member1.email == team.member2.email) || (team.member1.codechefid == team.member2.codechefid) || (team.member1.rollNumber == team.member2.rollNumber))
+	{
+		checkMails = false;
+	}
+	else
+	{
+
+  		try{
+  		  const querySnapshot = await getDocs(q); 
+  		  if(querySnapshot.size>0){
+  		    querySnapshot.forEach((doc) => {
+  		      if(team.member1.email === doc.data().member1.email || 
+  		        team.member1.email === doc.data().member2.email ||
+  		        team.member2.email === doc.data().member1.email ||
+  		        team.member2.email === doc.data().member2.email){
+  		          checkMails=false
+  		        }
+  		    });
+  		  }   
+  		}
+  		catch(e){
+  		  return {status:false,desc:'Unknown Error Occured'};
+  		}   
+	}
 
   if(checkMails){
     try {

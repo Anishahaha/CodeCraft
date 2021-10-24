@@ -10,7 +10,7 @@ import Home from './Components/home/home';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={'/codeCraft'}>
           <Switch>     
             <Route path="/register" component={Register}/>
             <Route path="/" component={Home} />             

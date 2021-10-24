@@ -13,8 +13,9 @@ export default function Dates() {
                     25 
                 </p>
                 <div className='dateCard' >
-                    <p>Introduction to Competitive Programming</p>
-                    <p>Mock Contest</p>
+                    <p>A Seminar on Introduction to Competitive Programming</p>
+	   		<p>&</p>
+                    <p>codeCraft 3.0 Day 1 - Mock Contest</p>
                 </div>                
             </div>
 
@@ -25,7 +26,8 @@ export default function Dates() {
                      26
                 </p>
                 <div className="dateCard">
-                <p>codeCraft 3.0</p>
+                <p>codeCraft 3.0 Day 2 - Main contest</p>
+	    	<p>&</p>
                 <p>Results announcement</p>
                 </div>
             </div>           

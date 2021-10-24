@@ -49,7 +49,7 @@ export default function LandingPage() {
 
  const Timer = ()=>{
     const [time,setTime] = useState(['00','00','00','00'])
-    const countDownDate = new Date("Oct 24, 2021 00:00:00").getTime();
+    const countDownDate = new Date("Oct 24, 2021 21:00:00").getTime();
     
     useEffect(()=>{
         const x = setInterval(function() {
@@ -64,9 +64,8 @@ export default function LandingPage() {
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
           
             setTime([days,hours,minutes,seconds])
-            if (distance < 0) {
+            if (now  ==  new Date("Oct 24, 2021 21:00:00")) {
               clearInterval(x);
-              
             }
           }, 1000);
           return ()=>clearInterval(x)

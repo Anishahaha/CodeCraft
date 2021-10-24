@@ -1,5 +1,6 @@
 import './footer.css'
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Logo from '../../assets/white_logo.png'
 
 export default function Footer(){
@@ -10,7 +11,7 @@ export default function Footer(){
                 <div className="footer-items">
                     <h1>coding.Studio();</h1>
                     <img src={Logo} alt="logo" height="40"></img>
-                    <p>Programming Club - VBIT</p>
+                    <p>The Official Programming Club of VBIT</p>
                     
                 </div>
                 <div className="footer-items">
@@ -18,8 +19,8 @@ export default function Footer(){
                     <div className="border1"></div>
                     <ul className="list">
                         <a href="#landingPage" ><li>Home</li></a>
-                        <a  href='register'>Register</a>
-                        <a href="#codeCraft" ><li>About us</li></a>
+                        <Link  to='register/'>Register</Link>
+                        <a href="https://codingstudio.club" ><li>About us</li></a>
                     </ul>
                 </div>
                 <div className="footer-items">
@@ -27,7 +28,7 @@ export default function Footer(){
                     <div className="border1"></div>
                     <ul className="list">
                         <a href="https://g.page/coding-studio?share" target="_blank" rel="noreferrer"> 
-                        <li><i className="fa fa-map-marker"></i>c.S(); HQ-VBIT,Hyd</li>
+                        <li><i className="fa fa-map-marker"></i>c.S(); HQ, 1st Floor,Nalanda Block, VBIT</li>
                         </a>
                         <a href="tel:+918790805406" target="_blank" rel="noreferrer"> 
                         <li><i className="fa fa-phone"></i>+918790805406</li>
