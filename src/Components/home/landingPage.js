@@ -49,7 +49,7 @@ export default function LandingPage() {
 
  const Timer = ()=>{
     const [time,setTime] = useState(['00','00','00','00'])
-    const countDownDate = new Date("Oct 24, 2021 00:00:00").getTime();
+    const countDownDate = new Date("Oct 24, 2021 21:00:00").getTime();
     
     useEffect(()=>{
         const x = setInterval(function() {
