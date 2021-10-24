@@ -49,7 +49,8 @@ export default function Secret() {
                 {s.member2.rollNumber}
                 </td>
                 <td>
-                {s.member1.name} 
+                {s.member1.name}
+		  <br/>
                 {s.member2.name}
                 </td>
                 <td>
