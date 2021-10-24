@@ -34,9 +34,6 @@ export default function LandingPage() {
                 </div>
                 </div>
                 <Timer/>
-                <button onClick={()=>history.replace('register')} className='btn-reg'>
-                    Register Now
-                </button>
                 <div className='space5' ></div>
                 <a href="#dates">
                 <div className="downIcon" >
@@ -52,23 +49,6 @@ export default function LandingPage() {
     const countDownDate = new Date("Oct 24, 2021 21:00:00").getTime();
     
     useEffect(()=>{
-        const x = setInterval(function() {
-
-            const now = new Date().getTime();
-          
-            const distance = countDownDate - now;
-          
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-          
-            setTime([days,hours,minutes,seconds])
-            if (now  ==  new Date("Oct 24, 2021 21:00:00")) {
-              clearInterval(x);
-            }
-          }, 1000);
-          return ()=>clearInterval(x)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     
@@ -77,7 +57,7 @@ export default function LandingPage() {
     <span style={{
         fontSize:'1.25rem',
         textAlign:'center'
-    }} >Registration closes in</span>
+    }} >Registration closed</span>
         <div className="timer" >
 
             <div className='timer-b timer' >
